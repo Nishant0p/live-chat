@@ -12,7 +12,8 @@ const usernameInput = document.getElementById('username-input');
 channel.subscribe('chat', (message) => {
     const msgElement = document.createElement('div');
     msgElement.classList.add('message', 'received');
-    msgElement.innerHTML = `<strong>${message.username}:</strong> ${message.data}`;
+    // Access the username and message data correctly
+    msgElement.innerHTML = `<strong>${message.data.username}:</strong> ${message.data.text}`;
     chatBox.appendChild(msgElement);
     chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
 });
@@ -26,7 +27,10 @@ sendButton.addEventListener('click', () => {
         msgElement.classList.add('message', 'sent');
         msgElement.innerHTML = `<strong>${username}:</strong> ${message}`;
         chatBox.appendChild(msgElement);
-        channel.publish('chat', { data: message, username: username });
+        
+        // Publish the message as an object with username and text
+        channel.publish('chat', { username: username, text: message });
+        
         messageInput.value = '';
         chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
     }

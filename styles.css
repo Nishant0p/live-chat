@@ -1,0 +1,91 @@
+body {
+    font-family: 'Pacifico', cursive;
+    background-color: #e8f5e9; /* Light green background */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+header {
+    background-color: #ff3366; /* Heart color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.username-container {
+    padding: 10px;
+}
+
+#username-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ff99cc;
+    border-radius: 5px;
+}
+
+#chat-box {
+    height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #f1f1f1; /* Light gray for chat background */
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.message.sent {
+    background-color: #dcf8c6; /* Light green for sent messages */
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: #ffffff; /* White for received messages */
+    align-self: flex-start;
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ff99cc;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 10px;
+    background-color: #ff3366; /* Heart color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#send-button:hover {
+    background-color: #ff6699; /* Lighter pink on hover */
+}
+
+#music-input {
+    margin-top: 10px;
+    border: 2px solid #ff99cc;
+    border-radius: 5px;
+    padding: 5px;
+}

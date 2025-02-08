@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💖 Love Chat 💖</h1>
+        </header>
+        <div class="username-container">
+            <input type="text" id="username-input" placeholder="Enter your name..." />
+        </div>
+        <div id="chat-box"></div>
+        <div class="input-container">
+            <input type="text" id="message-input" placeholder="Type a sweet message..." />
+            <button id="send-button">Send</button>
+        </div>
+        <input type="file" id="music-input" accept="audio/*" />
+        <audio id="audio-player" controls></audio>
+    </div>
+    <script src="https://cdn.ably.com/lib/ably.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
